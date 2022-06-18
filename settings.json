@@ -1,0 +1,170 @@
+{
+    "workbench.colorTheme": "Default Light+",
+    "window.zoomLevel": 2,
+
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.sneak": true,
+    "vim.easymotionMarkerooundColor": "#020202",
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    // vertical split
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    // show sidebar
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // find in explorer
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    // go to end
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    },
+    // go up 5 lines
+    {
+          "before": ["J"],
+          "after": ["5", "j"]
+    },
+    // go down 5 lines
+    {
+          "before": ["K"],
+          "after": ["5", "k"]
+    },
+    {
+        "before": ["<Leader>", "j"],
+        "after": ["J"]
+    },
+    //save files
+    {
+        "before": ["leader", "w"],
+        "commands": [
+            "workbench.action.files.save",
+        ]
+    },
+    //show all comands
+    {
+        "before": ["<Leader>", "p"],
+        "commands": [
+            "workbench.action.showCommands",
+        ]
+    },
+    // go to symbol
+    {
+      "before": ["<Leader>", "t"],
+      "commands": [
+          "workbench.action.gotoSymbol",
+      ]
+    },
+    //close workbook
+    {
+      "before": ["leader", "q"],
+      "commands": [
+          {
+              "command": "workbench.action.files.save",
+              "args": []
+          },
+          {
+              "command": "workbench.action.closeActiveEditor",
+              "args": []
+          }
+      ]
+    },
+    //comment line
+    { 
+      "before": ["leader", "c", "c"],
+      "commands": ["editor.action.addCommentLine"]
+    },
+    //uncoment line
+    {
+      "before": ["leader", "c", "u"],
+      "commands": ["editor.action.removeCommentLine"]
+    },
+    // show contextual help
+    {
+      "before": ["leader", "h"],
+      "after": ["g", "h"]
+    },
+    // go to definition
+    {
+      "before": ["leader", "d"],
+      "after": ["g", "d"]
+    },
+    //go back
+    {
+      "before":["leader", "b"],
+      "commands":["workbench.action.navigateBack"]
+    },
+    //rename
+    {
+      "before": ["leader", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    // trim whitespace
+    {
+      "before": ["leader", "t","r"],
+      "commands": ["editor.action.trimTrailingWhitespace"]
+    },
+  
+  ],
+
+  "vim.leader": "<space>",
+
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-d>": false,
+    // Copy
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false,
+    "<C-w>": false,
+    "<C-o>": false,
+
+  }
+}
+
