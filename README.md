@@ -1,3 +1,3 @@
 # vim
 
-# setting json for vs code
+- setting json for vs code
