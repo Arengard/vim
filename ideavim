@@ -4,6 +4,7 @@ set scrolloff=3 " 3 lines above/below cursor when scrolling
 
 " Emulated Plugins
 set surround
+set relativenumber
 " set easymotion
 set NERDTree
 
@@ -18,18 +19,15 @@ set multiple-cursors
 
 let mapleader = " "
 
+nnoremap <leader>ei :vsplit ~/.ideavimrc<cr>
+
 " Create new vertical splits on right and horizontals on below
-" set splitright
-" set splitbelow
-
-
-" Use Q for formatting the current paragraph (or visual selection)
-vmap Q gq
-nmap Q gqap
+set splitright
+set splitbelow
 
 " Closing tabs
-nmap <leader>q :action CloseContent<cr>
-nmap <leader>Q :action ReopenClosedTab<cr>
+nmap <leader>q :action CloseContent <cr>
+nmap <leader>qw :action ReopenClosedTab<cr>
 
 " To navigate between split panes
 nmap <leader>wo :action NextSplitter<cr>
@@ -69,9 +67,6 @@ nmap <leader>a :action RecentChangedFiles<cr>
 nmap <leader>p :action JumpToLastWindow<cr>
 nmap <leader>b :action ShowBookmarks<cr>
 
-
-" nmap <leader>a :action Switcher<cr>
-nmap ,a :action GotoAction<cr>
 
 
 " Refactorings
@@ -124,7 +119,7 @@ nmap ,l :action RecentLocations<cr>
 nmap ,S :action ShowProjectStructureSettings<cr>
 
 " Pin/Unpin active tab
-nmap \p :action PinActiveTabToggle<cr>
+nmap ,p :action PinActiveTabToggle<cr>
 
 " Increase or decrease font size
 nnoremap <leader>+ :action EditorIncreaseFontSize<cr>
@@ -133,5 +128,7 @@ nnoremap <leader>- :action EditorDecreaseFontSize<cr>
 imap jj <Esc>
 
 
-nmap <leader>d : action GotoDeclaration<cr>
-nmap <leader>b : action GoBack<cr>
+nmap <leader>gd : action GotoDeclaration<cr>
+nmap <leader>gb : action Back<cr>
+
+
