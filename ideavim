@@ -81,9 +81,15 @@ nmap <leader>ic :action InspectCode<cr>
 
 " Terminal
 nmap <leader>T :action ActivateTerminalToolWindow<cr>
+"                                           RAMON LEADER SHIFT ENTER
+" map shift enter to leader enter
+nmap <leader><leader> :action NotebookRunCellSelectBelowAction<cr>
 
+" restart kernel as delete output
+nmap <leader>rr :action JupyterClearOutputsAction<cr>
 
 " IdeaVim uses 'a' for alt instead of Vim's 'm'
+
 nmap <a-j> 15gj
 nmap <a-k> 15gk
 
